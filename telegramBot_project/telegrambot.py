@@ -14,6 +14,7 @@ products = {"Dabur Honey(200 g)": 382.00,
             "Assure Hand Wash(250 ml)": 145.00,
             "Enerva Breakfast Cereal(350 g)": 299.00,
             "Hyvest Ultra Matic Detergent Powder(500 g)": 185.00,
+            "Flax oil ":515.00,
             }
 
 # Define the functions to be executed when each button is pressed
@@ -38,6 +39,7 @@ def view_products(update, context):
                     "Assure Hand Wash(250 ml)": 145.00,
                     "Enerva Breakfast Cereal(350 g)": 299.00,
                     "Hyvest Ultra Matic Detergent Powder(500 g)": 185.00,
+                    "Flax oil ":515.00,
             }
     message = "Here are the available products:\n\n"
     for product, price in products.items():
@@ -97,7 +99,7 @@ def main_menu():
 def add_to_cart_menu():
     keyboard = []
     products = ["Dabur Honey(200 g)", "Sunfeast Dark Fantasy Coco Fills(5 piece)", "Zeta Tea(250 g)", "Zeta Coffee(150 g)", "Rice Bran Oil(2 liters)", "Assure Hair Conditioner(75 g)",
-                "Assure Arctic Perfume Spray (100 ml)", "Assure Hand Wash(250 ml)", "Enerva Breakfast Cereal(350 g)", "Hyvest Ultra Matic Detergent Powder(500 g)"]
+                "Assure Arctic Perfume Spray (100 ml)", "Assure Hand Wash(250 ml)", "Enerva Breakfast Cereal(350 g)", "Hyvest Ultra Matic Detergent Powder(500 g)","Flax oil"]
     for product in products:
         keyboard.append([InlineKeyboardButton(
             f"Add {product}", callback_data=f'add_to_cart:{product}')])
